@@ -1,6 +1,12 @@
-// function  print(m, t){
-//     console.log();
-// };
+function print(m, t) {
+    console.log(m + t);
+}
+
+print(6, 7); // Output: 13
+
+
+
+
 
 
 
@@ -10,12 +16,12 @@ let x= console.log;
 x(5);
 
 
-function print (x){
-    x+=10;
-    return x;
-}
+// }
+// function print (x){
+//     x+=10;
+//     return x;
 
-console.log(print(10));
+// console.log(print(10));
 
 
 function greet(name){
