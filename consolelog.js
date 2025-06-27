@@ -7,7 +7,7 @@ function f(abc)
     return abc;
 }
 
-const a=f("aarushi i love you");
+const a=f("aalloo");
 
 console.log(a);
 
@@ -17,5 +17,5 @@ console.log(a);
 
 // A prediction
 
-// aarushi i love you
+// aalloo
 //undefined
