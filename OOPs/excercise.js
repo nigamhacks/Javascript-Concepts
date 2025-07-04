@@ -1,7 +1,6 @@
 function Stopwatch() {
     //private variable
 
-    //not working need to check today evening 
     let startTime, endTime, running = false, duration = 0;
 
     this.start = function () {
