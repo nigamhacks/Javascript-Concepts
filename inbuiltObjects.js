@@ -1,3 +1,4 @@
+//math object
 console.log("Hello Objects");
 
 console.log(Math.PI);
@@ -12,3 +13,11 @@ console.log(Math.floor(1.5));
 
 console.log(Math.abs(-7));
 
+
+//date object
+
+let curr = new Date();
+
+console.log(curr);
+
+console.log(curr.getSeconds());
