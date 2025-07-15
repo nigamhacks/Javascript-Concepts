@@ -2,7 +2,7 @@
 
 //A runtime error is an error that occurs while your program is running.
 
-try {
+try { 
     var errorCode =100;
     console.log(x);
     //Optional. Statement(s) where an error can occur. Can be a compound statement.
