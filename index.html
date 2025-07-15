@@ -23,5 +23,35 @@
 
         <p>This is my Third para </p>
     </div>
+    <div>
+     hello Guys!
+        <div id ='demo'>
+            <p id='fpara1'>first</p>
+            <p>second</p>
+            <p>third</p>
+        </div>
+    </div>
+    <script>
+        // so here we are creating the child which is 'fheading'
+        let fheading = document.createElement('h1');
+        fheading.textContent= 'I am the first heading';
+        //here we are selecting and appending the child into the parent node in he last position  
+        let bodyTag=document.querySelector('body');
+        bodyTag.appendChild(fheading);
+
+        // here we are creating the element and also we are placing the element in our desired position 
+        let demoDiv= document.querySelector('#demo');
+        let newEle = document.createElement('span');
+        newEle.textContent= 'this is me Sachin';
+        demoDiv.insertAdjacentElement('beforebegin',newEle);
+
+        // we have four positon : beforebegin, afterbegin, beforeend, afterend 
+
+        //remove the child  
+
+        // let parent = document.querySelector('#demo');
+        // let child = document.querySelector('#fpara1');
+        // parent .removeChild(child);
+    </script>
 </body>
 </html>
