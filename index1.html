@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fDiv" style="background-color: aquamarine; padding: 2rem;" class="fC" >
+        First Div 
+        <p id="fPara" 
+        style="background-color:blueviolet; padding: 2rem;">
+            First Para
+        </p>
+        </div>
+        <div id="sDiv" class="sC" style="background-color:rgb(103, 172, 39); padding: 2rem;">
+            Second Div
+        <p id= "sPara" style="background-color:rgb(187, 44, 44); padding: 2rem;">
+            Second Para
+        </p>
+        </div>
+    </div>
+    <!-- we can get and set the css properties at once as follows -->
+     <script>
+        //
+        // >> let getElement= document.getElementById('sDiv');
+
+        //print the getElement 
+
+        // >> getElement;
+        //cssText will print the propery used on that particular ID 
+
+        // >> getElement.style.cssText;
+
+        //now we have to set multiple properties at once after seeing the properties that are already applied we can change them by using "style.cssText" only 
+
+        // >> getElement.style.cssText="background-color: black; color:white; padding: 0.5 rem ";
+        
+        // setAttribute is a method will change the value of the particular style and if there is value already set to the style it will clean it first and only the put the property that we have given just now:
+
+        // we can see now in this example 
+
+        let a = document.querySelector('#fDiv');
+
+        //k.setAttribute('class', 'firstclass');
+
+        //k.setAttribute('style', "padding: 0.1")  
+
+        //In line 47 we are only giving padding to the "#fdiv" ID where other properties will be rewritten to padding :0.1 rem only other properies will be erased.
+
+        a.classList;
+        //classlist will return all classes in an array 
+        a.classList.add('secondClass thirdClass');
+        a.classList.remove('thirdclass');
+        a.classList.toggle('seconfClass');
+        //what toggle does 
+        // If the element does not have the specified class, it adds it.
+        // If the element already has the class, it removes it.
+        
+        a.classList.contains('thirdClass');
+        // It checks the given the class that is present or not
+     </script>
+</body>
+
+</html>
