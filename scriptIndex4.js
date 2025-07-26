@@ -58,5 +58,5 @@ for (let i=1; i<=100; i++){
 document.body.append(fragment);
 const t6=performance.now();
 
-console.log('Time taken by Code 3 ',t6-t5);
+console.log('Time taken by Code 3 ', t6-t5);
 
