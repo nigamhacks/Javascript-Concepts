@@ -51,3 +51,7 @@ Promise.all((p1, p2, p3)).then((values)=>{
 .catch((error)=>{
     console.error('Error: ', error);
 })
+
+
+// Promises in JavaScript provide a structured and manageable way to handle asynchronous operations.
+//  They represent the eventual completion or failure of an asynchronous operation and allow you to associate handlers with its eventual success value or failure reason.
