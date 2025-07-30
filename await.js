@@ -24,3 +24,49 @@ async function getData1() {
 getData1();
 
 
+
+const myHeaders = new Headers(); 
+myHeaders.append("Content-Type", "application/json");
+
+const url="'https://dummyjson.com/posts'";
+const options = {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+  headers: myHeaders,
+};
+
+async function getData2(){
+    //line 40 will give error because site is not maintaining the post data 
+    const url="https://dummyjson.com/posts/252";
+     const response1 =await fetch(url);
+     let data = await response1.json();
+     console.log('Get Data Response: ', data);
+}
+
+async function postData2() {
+    const response1 =await fetch('https://dummyjson.com/posts/add', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    title: 'Sachin -> is in love with someone.',
+    userId: 8,
+    /* other post data */
+  })
+})
+    let data = await response1.json();
+    console.log('Post Data Response: ', data);
+}
+
+async function processData() {
+    await postData2();
+    await getData2();
+
+}
+
+processData();
+
+
+
+
+
+
