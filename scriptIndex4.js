@@ -45,7 +45,7 @@ const t4=performance.now();
 
 console.log('Time taken by Code 2 ',t4-t3);
 
-//Code 3 >> Best Code 
+//Code 3 >> Best Code | Fragment
 const t5=performance.now();
 let fragment = document.createDocumentFragment();
 
