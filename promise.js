@@ -3,7 +3,7 @@
 // let firstPromise =new Promise((resolve, reject)=>{
 //     console.log('Hi there this is Sachin');
 // }
-// );
+// ); 
 
 let asy = new Promise((resolve, reject)=>
 {
