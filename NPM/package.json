@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "moment": "^2.30.1"
+    "moment": "^2.30.1",
+    "uniq": "^1.0.1"
   }
 }
