@@ -1,4 +1,4 @@
-// there is probel when running this file in the browser to overcome that problem 
+// there is problem when running this file in the browser to overcome that problem 
 
 // with the help of broswerfiy >> We have bundled the main.js to bundle.js and then moment is working fine 
 // browserify main.js -o bundle.js 
