@@ -1,0 +1,43 @@
+a:link{
+    color: lightseagreen;
+}
+
+a:visited{
+    color: grey;
+}
+
+a:hover{
+    color: tomato;
+}
+
+a:active{
+    color:yellow
+}
+
+button:hover{
+    background-color: rgb(80, 158, 49) ;
+
+}
+
+/* li:nth-child(2),:nth-child(5){
+    background-color: blueviolet;
+} */
+
+li:nth-child(odd){
+    background-color: beige;
+}
+li:nth-child(even){
+    background-color: aqua;
+}
+
+
+h1 {
+    text-shadow: 
+        0px 0px 5px rgb(222, 174, 63), 
+        0px -5px 5px rgb(219, 29, 29);
+}
+
+
+h1:hover{
+    box-shadow: 5px 5px 5px;
+}

@@ -1,0 +1,59 @@
+#box1{
+    width: auto;
+    height: 250px;
+    background: red;
+    font-size: 250px;
+    text-align: center;
+   
+    /* animation: slide;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-timing-function: linear; */
+
+     animation: 
+        3s linear 0s infinite running myColorChange,
+        /* 5s linear 0s infinite running slide, */
+        /* 2s linear 0s infinite running myRotation, */
+        1.5s ease-in-out 0s infinite alternate myOpacity,
+        /* 2.5s ease-in-out 0s infinite alternate myScale; */
+        2.5s ease-in-out 0s infinite alternate myRotationAndScale;
+
+}
+
+@keyframes slide {
+    from{margin-left: 100%;}
+    to{margin-left: 0%;}
+}
+
+/* @keyframes myRotation {
+    100%{transform: rotate(360deg);}
+} */
+
+@keyframes myOpacity {
+    50%{
+        opacity: 0%,
+}
+}
+/* @keyframes myScale {
+       100%{
+        transform: scale(0.5,0.5);
+       } 
+    } */
+
+    /* myRotation and myScale were conflicting that is why I introduced myRotationAndScale, there was a sudden lag or restart kind of thing  */
+
+    @keyframes myRotationAndScale {
+    100%{
+        transform: rotate(360deg) scale(0.5,0.5);
+    }
+}
+
+@keyframes myColorChange {
+    20%{background-color: orange;}
+    40%{background-color: yellow;}
+    60%{background-color: green;}
+    80%{background-color: blue;}
+    100%{background-color: purple;}
+}

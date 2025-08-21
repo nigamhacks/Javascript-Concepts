@@ -1,0 +1,75 @@
+/* padding is the space between border and the content  */
+body{
+    /* background: linear-gradient(to right,red, skyblue, green);
+    background-repeat:no-repeat;
+    background-attachment: fixed; */
+
+    background-image: url(https://backiee.com/static/wallpapers/1920x1080/275785.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 0px;
+}
+
+h1{
+   
+    color: white;
+    font-family: "Press Start 2P";
+}
+
+p{
+    border-style: outset;
+    border-width: 5px;
+    border-color: rgb(213, 127, 127);
+    border-radius: 10px;
+    padding: 5px;
+    color: rgb(195, 255, 0);
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-size: 18px;
+    /* clear: both;  this clear "clear" propert is used to disable the float property*/
+}
+
+#box1{
+    margin-right: auto;
+    /* margin-left: auto; */
+    border :5px solid;
+    width:250px;
+    height: 250;
+    color: rgb(83, 88, 87);
+    background-color: bisque;
+    font-size: larger;
+    padding: 50px;
+}
+
+#box2{
+    /* margin-right: auto; */
+    margin-left: auto;
+    border :5px solid;
+    width:250px;
+    height: 250;
+    color: rgb(22, 190, 156);
+    background-color: rgb(38, 75, 188);
+    font-size: larger;
+    padding: 50px;
+}
+
+img{
+    /* float property is used to position an element to the left or right of a container 
+    example: Popular for wrapping element around the images 
+    */
+    float:left;
+}
+
+.box{
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    font-size:40px;
+    text-align: center;
+    background-color: aliceblue;
+
+    float: left;
+
+
+}
+
