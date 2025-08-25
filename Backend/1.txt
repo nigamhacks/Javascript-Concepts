@@ -1,0 +1,7 @@
+for this backend learning :
+ 
+ we need these topics to be refreshed first :
+
+        1. HTML CSS JS ES6
+
+        2. Callbacks Promises Async-Await
