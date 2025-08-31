@@ -2,6 +2,8 @@
 
 const{readFile, writeFile} =require('fs');
 
+console.log('start')
+//reading the first file
 readFile('./first.txt','utf8', (err, result)=>{
     if(err){
         console.log(err);
@@ -9,7 +11,7 @@ readFile('./first.txt','utf8', (err, result)=>{
     }
 
     const first = result;
-
+//reading the second file 
     readFile('./second.txt/', 'utf8',(err,result)=>{
  if(err){
         console.log(err);
@@ -21,10 +23,11 @@ readFile('./first.txt','utf8', (err, result)=>{
     writeFile('./result-async.txt',`here is the result of async ${first}, ${second}`
         ,(err,result)=>{
             if(err){
-                console.lof(err);
+                console.log(err);
                 return;
             }
-            console.log(result)
+            // console.log(result)
+            console.log('done with this task');
         }
     )
 
@@ -32,3 +35,5 @@ readFile('./first.txt','utf8', (err, result)=>{
 
 
   })
+
+  console.log('starting next task');
