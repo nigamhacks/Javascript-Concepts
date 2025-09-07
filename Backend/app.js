@@ -1,7 +1,22 @@
-const _ = require('lodash');
+const { readFile, writeFile } = require("fs");
+const util = require('util');
+const readFilePromise= util.promisify(readFile);
 
-const items =[1,[2,[3,[4]]]];
+const writeFilePromise= util.promisify(writeFile);
 
-const newItems= _.flattenDeep(items);
+const start = async () => {
+  try {
+    const first = await readFilePromise("./first.txt", 'utf8');
+    const second = await readFilePromise("./second.txt", 'utf8');
+    //first two promises to read file 
+    await writeFilePromise('./data.txt', `This is awesome : ${first} ${second}`);
+    //this promise is used to write the data.txt file with contents of first and second text file
+    console.log(first, second);
 
-console.log(newItems);
+  } catch (error) {
+    console.log(error);
+  }
+};
+start();
+
+//Note => while running this module please clear data.txt file 
