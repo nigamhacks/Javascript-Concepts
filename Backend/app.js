@@ -9,7 +9,7 @@ const start = async () => {
     const first = await readFile("./first.txt", 'utf8');
     const second = await readFile("./second.txt", 'utf8');
     //first two promises to read file 
-    await writeFile('./data.txt', `This is awesome : ${first} ${second}`);
+    await writeFile('./data.txt', `This is awesome : ${first} ${second}`, {flag:a}  );
     //this promise is used to write the data.txt file with contents of first and second text file
     console.log(first, second);
 
