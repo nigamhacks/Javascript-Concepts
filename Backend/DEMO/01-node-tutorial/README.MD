@@ -1,9 +1,5 @@
-# Node and Express Tutorial
+# Node and Express
 
-
-#### Support
-
-Find the App Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
 
 #### Contents
 
@@ -13,11 +9,6 @@ Find the App Useful? [You can always buy me a coffee](https://www.buymeacoffee.c
 4. Store API
 5. JWT Basics
 6. Jobs API
-
-#### Course Exclusive
-
-
-
 7. File Upload (local and cloudinary)
 8. Send Email (nodemailer,ethereal and sendgrid )
 9. Stripe Payment
