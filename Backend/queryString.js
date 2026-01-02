@@ -7,6 +7,8 @@ app.get('/', (req, res) => {
 });
 // start : it will give all products
 app.get('/api/products', (req, res) => {
+// product → represents the current item in the array during that iteration.
+
     const newProducts = products.map((product) => {
         const { id, name, image } = product;
         return { id, name, image };
@@ -39,6 +41,7 @@ app.get('/api/products/:id/reviews/:reveiwsID',(req,res)=>{
 app.get('/api/v1/query', (req, res) => {
     const { search, limit } = req.query;
     let sortedProduct = [...products];
+    // ... creates an array 
 
     if (search) {
         sortedProduct = sortedProduct.filter((product) => {
