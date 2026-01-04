@@ -43,41 +43,65 @@
       integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
       crossorigin="anonymous"
     ></script>
-    <script>
-      const result = document.querySelector('.result')
+<script>
+  // Select the div where results (list of people) will be displayed
+  const result = document.querySelector('.result')
 
-      const fetchPeople = async () => {
-        try {
-          const { data } = await axios.get('/api/people')
+  // Define an async function to fetch people from the backend
+  const fetchPeople = async () => {
+    try {
+      // Send GET request to /api/people endpoint
+      const { data } = await axios.get('/api/people')
 
-          const people = data.data.map((person) => {
-            return `<h5>${person.name}</h5>`
-          })
-          result.innerHTML = people.join('')
-        } catch (error) {
-          result.innerHTML = `<div class="alert alert-danger">Can't Fetch Data</div>`
-        }
-      }
-      fetchPeople()
-      // submit form
-      const btn = document.querySelector('.submit-btn')
-      const input = document.querySelector('.form-input')
-      const formAlert = document.querySelector('.form-alert')
-      btn.addEventListener('click', async (e) => {
-        e.preventDefault()
-        const nameValue = input.value
-
-        try {
-          const { data } = await axios.post('/api/people', { name: nameValue })
-          const h5 = document.createElement('h5')
-          h5.textContent = data.person
-          result.appendChild(h5)
-        } catch (error) {
-          // console.log(error.response)
-          formAlert.textContent = error.response.data.msg
-        }
-        input.value = ''
+      // Map over the returned data array and create <h5> elements for each person
+      const people = data.data.map((person) => {
+        return `<h5>${person.name}</h5>`
       })
-    </script>
+
+      // Insert the generated HTML into the result div
+      result.innerHTML = people.join('')
+    } catch (error) {
+      // If request fails, show an error message
+      result.innerHTML = `<div class="alert alert-danger">Can't Fetch Data</div>`
+    }
+  }
+
+  // Call the function immediately when page loads
+  fetchPeople()
+
+  // --- Form submission logic ---
+  // Select the submit button
+  const btn = document.querySelector('.submit-btn')
+  // Select the input field
+  const input = document.querySelector('.form-input')
+  // Select the small element for showing alerts/errors
+  const formAlert = document.querySelector('.form-alert')
+
+  // Add click event listener to the submit button
+  btn.addEventListener('click', async (e) => {
+    e.preventDefault() // Prevent default form submission (page reload)
+
+    // Get the value entered in the input field
+    const nameValue = input.value
+
+    try {
+      // Send POST request to /api/people with the name as payload
+      const { data } = await axios.post('/api/people', { name: nameValue })
+
+      // Create a new <h5> element to display the added person
+      const h5 = document.createElement('h5')
+      h5.textContent = data.person // Use the 'person' returned from backend
+      result.appendChild(h5) // Append new person to result div
+    } catch (error) {
+      // If request fails, show error message inside formAlert
+      formAlert.textContent = error.response.data.msg
+    }
+
+    // Clear the input field after submission
+    input.value = ''
+  })
+</script>
+
+
   </body>
 </html>
