@@ -20,11 +20,11 @@ router.post('/', (req, res) => {
   
 //----------------------------------------------
 
-app.get('/api/people', (req,res)=>{
+router.get('/api/people', (req,res)=>{
     res.status(200).json({success: true, data:people})
 })
 
-app.post('/api/people',(req,res)=>{
+router.post('/api/people',(req,res)=>{
     const {name}=req.body
     if(!name){
         return res.status(400).json({success:false, msg:'Please provide name value'})
@@ -77,4 +77,4 @@ const  newPeople =people.filter((person)=>person.id !==Number(req.params.id))
 return res.status(200).json({success:true, data:newPeople})
 })
 
-module.exports =router
+module.exports = people
